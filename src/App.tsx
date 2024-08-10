@@ -1,12 +1,12 @@
 
 import './App.css'
-import { Person } from './Person';
+import { User } from './User';
 
 function App() {
 
   return (
     <>
-      <Person name={"Amruta"} age={35} isMarried={true}/>
+      <User name={"Amruta"} age={35} isMarried={true}/>
     </>
   )
 }
