@@ -1,14 +1,15 @@
 import * as React from "react";
 import { useState } from "react";
+import { UserContext } from "./UserContextProvider";
 
-export interface User {
+interface Props {
     name:string;
     age:number;
     isMarried: boolean
 }
 
 
-export const User = (props:User) => {
+export const User = (props:Props) => {
 
     const [userBio, setUserBio] = useState<string | null>(null)
     const [isShowInfo, setShowInfo] =useState<boolean | null>(false);
@@ -25,6 +26,8 @@ export const User = (props:User) => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
     }
+
+    // const {users, addUser,updateUser, deleteUser} = React.useContext(UserContext);
     return (
         <div>
             {isShowInfo && (
